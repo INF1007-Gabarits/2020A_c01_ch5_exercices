@@ -1,35 +1,37 @@
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod-redirect-0.herokuapp.com/)
 
-# Exercices en vrac (chapitre 4)
+# Exercices en vrac (chapitre 5)
 
-Avant de commencer. Consulter les instructions à suivre dans [instructions.md](instructions.md)
+Avant de commencer, consultez les instructions à suivre dans [instructions.md](instructions.md)
 
 ## Objectifs
 
 Compléter les quelques exercices suivants en modifiant le code de [exercice.py](exercice.py):
 
-1. Vérifier si le nombre de caractères d’une chaîne de caractères est pair
-2. Supprimer le 3ème caractère d’une chaîne de caractères
-3. Remplacer un caractère d’une chaîne de caractère par un autre
-4. Renvoyer le nombre d’occurrences d’un caractère dans une chaîne de caractères, sans utiliser de fonctions avancées
-5. Rechercher le nombre de mots dans une phrase donnée
+1. Écrire un programme qui lit un nombre et affiche sa valeur absolue
+2. Dans un conte américain, huit petits canetons s'appellent respectivement : Jack, Kack, Lack, Mack, Nack, Oack, Pack et Qack. Écrire un petit script qui génère tous ces noms à partir des deux chaînes suivantes : prefixes = 'JKLMNOP' et suffixe = 'ack'
+3. Calculer la somme des 100 premiers nombres entiers premiers
+4. Calculer la factorielle d’un nombre entier
+5. Utiliser l’instruction 'continue' pour modifier une boucle for d’affichage de tous les entiers de 1 à 10 compris, sauf lorsque la variable de boucle vaut 5
 
 ### À compléter
 Vous devez compléter les fonctions suivantes du fichier [exercice.py](exercice.py).
 
 ```python
-def is_even_len(string: str) -> bool:
-    return True
+def convert_to_absolute() -> float:
+    return 0.0
 
-def remove_third_char(string: str) -> str:
-    return ""
+def use_prefixes() -> List[str]:
+    prefixes, suffixes = 'JKLMNOP', 'ack'
 
-def replace_char(string: str, old_char: str, new_char: str) -> str:
-    return ""
+    return [""]
 
-def get_nb_char(string: str, char: str) -> int:
+def prime_integer_summation() -> int:
     return 0
 
-def get_nb_words(sentence: str, word: str) -> int:
+def factorial(number: int) -> int:
     return 0
+
+def use_continue() -> None:
+    pass
 ```

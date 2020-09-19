@@ -1,22 +1,14 @@
 {
-  "test_pair": {
-    "name": "Parité du nombre de caractères",
+  "test_prefixes": {
+    "name": "Utilisation des préfixes",
     "points": 1
   },
-  "test_remove_third_char": {
-    "name": "Retrait du 3e caractère",
+  "test_summation": {
+    "name": "Calcul de la sommation",
     "points": 1
   },
-  "test_replace_char": {
-    "name": "Remplacement d'un caractère",
-    "points": 1
-  },
-  "test_get_nb_char": {
-    "name": "Compte des occurences d'un caractère",
-    "points": 1
-  },
-  "test_get_nb_words": {
-    "name": "Compte du nombre de mots dans une phrase",
+  "test_factorial": {
+    "name": "Calcul de la factorielle",
     "points": 1
   }
 }

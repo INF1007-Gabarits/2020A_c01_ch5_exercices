@@ -2,41 +2,43 @@
 # -*- coding: utf-8 -*-
 
 
-def is_even_len(string: str) -> bool:
-    return False
+from typing import List
 
 
-def remove_third_char(string: str) -> str:
-    return ""
+def convert_to_absolute() -> float:
+    return 0.0
 
 
-def replace_char(string: str, old_char: str, new_char: str) -> str:
-    return ""
+def use_prefixes() -> List[str]:
+    prefixes, suffixes = 'JKLMNOP', 'ack'
+
+    return [""]
 
 
-def get_nb_char(string: str, char: str) -> int:
+def prime_integer_summation() -> int:
     return 0
 
 
-def get_nb_words(sentence: str) -> int:
+def factorial(number: int) -> int:
     return 0
+
+
+def use_continue() -> None:
+    pass
 
 
 def main() -> None:
-    string = "Bonjour!"
-    parity = 'pair' if is_even_len(string) else 'impair'
-    print(f"Le nombre de caractère dans la chaine '{string}' est {parity}")
+    print(f"La valeur absolue du nombre est {convert_to_absolute()}")
 
-    string = "Sam est cool!"
-    print(f"On supprime le 3e caratère dans la chaine '{string}'. Résultat: {remove_third_char(string)}")
+    print(f"La liste des noms générés avec les préfixes est: {use_prefixes()}")
 
-    string = "hello world!"
-    print(f"On remplace le caratère w par le caractère z dans la chaine: '{string}'. Résultat: {replace_char(string, 'w', 'z')}")
+    print(f"La somme des nombres de 0 à 100 est: {prime_integer_summation()}")
 
-    print(f"Le nombre d'occurrence de l dans hello est : {get_nb_char(string, 'l')}")
+    number = 10
+    print(f"La factiorelle du nombre {number} est: {factorial(number)}")
     
-    string = "Baby shark doo doo doo doo doo doo"
-    print(f"Le nombre de mots dans la chaine {string} est: {get_nb_words(string)}")
+    print(f"L'affichage de la boucle est:")
+    use_continue()
 
 
 if __name__ == '__main__':

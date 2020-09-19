@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import math
 import os
 import sys
 import unittest
@@ -9,11 +10,9 @@ import exercice
 
 
 class TestExercice(unittest.TestCase):
-    def test_pair(self):
-        values = ["hey jad!", "abcdefg", "0"]
-
-        output = [exercice.is_even_len(v) for v in values]
-        answer = [len(v) % 2 == 0 for v in values]
+    def test_prefixes(self):
+        output = exercice.use_prefixes()
+        answer = ["Jack", "Kack", "Lack", "Mack", "Nack", "Oack", "Pack", "Qack"]
 
         self.assertListEqual(
             output,
@@ -21,64 +20,34 @@ class TestExercice(unittest.TestCase):
             'Mauvaise identification de la parité de la longueur de la chaine'
         )
 
-    def test_remove_third_char(self):
-        values = ["hey jad!", "abcdefg", "01234"]
+    def test_summation(self):
+        primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53,
+            59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131,
+            137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
+            211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281,
+            283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373,
+            379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457,
+            461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541]
+        
+        answer = sum(primes)
+        output = exercice.prime_integer_summation()
 
-        output = [exercice.remove_third_char(v) for v in values]
-        answer = [v[0:2] + v[3:] for v in values]
-
-        self.assertListEqual(
+        self.assertEqual(
             output,
             answer,
             'Retrait du mauvais caractère'
         )
 
-    def test_replace_char(self):
-        values = [
-            ("hey jad!", "j", "y"),
-            ("aaaaab", "a", "b"),
-            ("01234", "0", "a")
-        ]
+    def test_factorial(self):
+        values = [1, 3, 8, 10]
 
-        output = [exercice.replace_char(v[0], v[1], v[2]) for v in values]
-        answer = [v[0].replace(v[1], v[2]) for v in values]
+        output = [exercice.factorial(v) for v in values]
+        answer = [math.factorial(v) for v in values]
 
         self.assertListEqual(
             output,
             answer,
             'Erreur dans le remplacement de caractère'
-        )
-    
-    def test_get_nb_char(self):
-        values = [
-            ("aaaa123", "a"),
-            ("athse wqc re", "s"),
-            ("aaaa", "x")
-        ]
-
-        output = [exercice.get_nb_char(v[0], v[1]) for v in values]
-        answer = [v[0].count(v[1]) for v in values]
-
-        self.assertListEqual(
-            output,
-            answer,
-            "Mauvais calcul du nombre d'occurences du caractère"
-        )
-
-    def test_get_nb_words(self):
-        values = [
-            ("Comment allez vous aller chez vous"),
-            ("Bonjour hello ok salut merci"),
-            ("The 2006 Subway 500 was the 32nd stock car race of the 2006 NASCAR Nextel Cup Series and the sixth in the ten-race Chase for the Nextel Cup.")
-        ]
-
-        output = [exercice.get_nb_words(v[0], v[1]) for v in values]
-        answer = [len(v.split()) for v in values]
-
-        self.assertListEqual(
-            output,
-            answer,
-            "Mauvais calcul du nombre de mots dans une phrase."
         )
 
 
